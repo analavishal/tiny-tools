@@ -1,7 +1,6 @@
 import wmi
 import winsound
 import ctypes
-import time
 
 t = wmi.WMI(moniker = "//./root/wmi")
 b = t.ExecQuery('Select * from BatteryFullChargedCapacity')
@@ -16,6 +15,5 @@ while True:
     elif charge >= 80 and chargerConnected:
         winsound.PlaySound('sound.wav', winsound.SND_FILENAME)
         ctypes.windll.user32.MessageBoxW(0, "Remove charger", "Battery Health", 1)
-    time.sleep((total - charge)*60)
     charge = round((b[0].RemainingCapacity / total) * 100)
     chargerConnected = b[0].PowerOnLine
