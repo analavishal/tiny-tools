@@ -7,7 +7,7 @@ Python3.6
 For better battery Life
 
 Reminds to connect charger if battery less than 40%
-Reminds to remove charger if battery greater than 80%
+and to remove charger if battery greater than 80%
 
 # Eyes for Windows
 to decrease eye strain
